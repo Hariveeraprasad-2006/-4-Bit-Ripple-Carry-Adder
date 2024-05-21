@@ -1,18 +1,17 @@
 # -4-Bit-Ripple-Carry-Adder
 The design procedure for the 4-bit Ripple Carry Adder (RCA) Verilog code:
-1. Full Adder Design:
+# 1. Full Adder Design:
 
 The design utilizes a full adder component as the building block for the RCA.
 A full adder takes three binary inputs (X, Y, and Ci) and generates two outputs: the sum (S) and carry-out (Co).
 The logic uses XOR gates to compute the sum and carry based on the input bits.
-2. Ripple Carry Adder Design:
+# 2. Ripple Carry Adder Design:
 
 The RCA consists of four full adders connected in cascade.
 Each full adder adds two corresponding bits from the input operands (X and Y) along with the carry-in (Ci) from the previous stage.
 The carry-out (Co) of one stage becomes the carry-in (Ci) for the next stage, hence the name "ripple carry."
 The first stage's carry-in (Ci) is typically set to 0.
-3. Verilog Code Breakdown:
-
+# 3. Verilog Code Breakdown:
 The ripple_adder module:
 Takes two 4-bit inputs (X and Y).
 Instantiates four fulladder modules, one for each bit position.
